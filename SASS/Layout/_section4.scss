@@ -1,0 +1,71 @@
+.section--4{
+    text-align: center;
+    height: 100vh;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    background-color: $color-grey-light-1;
+    &-text{
+        text-align: left;
+        width: 70vw;
+        margin: auto;
+        .text__1, .text__2{
+            background-color: rgba($color: $color-grey, $alpha: 0.2);
+            padding: 5rem;
+            border-radius: 10rem;
+            box-shadow: 0rem 0rem 2rem rgba($color: black, $alpha: 0.3);
+            // color: $color-grey;
+            .text-main{
+                font-size: 2rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+            .text-sub{
+                font-size: 1.6rem;
+                line-height: 3rem;
+            }
+            figure{
+                margin: 0;
+                width: 15rem;
+                height: 15rem;
+                margin-top: -1rem;
+                margin-right: 5rem;
+                shape-outside: circle();
+                clip-path: circle(50% at 50% 50%);
+                float: left;
+            }
+            .text-img{
+                position: relative;
+                cursor: pointer;
+                &-shape{
+                    width: 100%;
+                    transform: translateY(-1.5rem);
+                    transition-duration: 1s;
+                }
+                &__caption{
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    color: $color-white;
+                    opacity: 0;
+                    transform: translate(-50%, -30%);
+                    transition-duration: 1s;
+                    text-align: center;
+                    
+                }
+                &:hover .text-img__caption{
+                    opacity:1;
+                    transform: translate(-50%,-50%);
+                }
+                &:hover .text-img-shape{
+                    filter: blur(0.4rem) brightness(50%);
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .text__1{
+            margin-bottom: 3rem;
+        }
+    }
+}

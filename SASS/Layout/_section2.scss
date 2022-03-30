@@ -1,0 +1,44 @@
+.section--2{
+    display: block;
+    height: 95vh;
+    box-sizing: border-box;
+    text-align: center;
+    background-image: linear-gradient(to right bottom,rgba($color-primary-light,.5),rgba($color-primary-dark,.7)),url('../../img/background2.jpg');
+    background-size: cover;
+    clip-path: ellipse(77% 43% at 50% 49%);
+    &__icon{
+        padding-top: 5%;
+        color: rgba($color-primary-dark,.7);
+        font-size: 6rem;
+    }
+    .row{
+        padding: 0;
+        transform: translateY(50%);
+        display: inline-block;
+        width: 80%;
+        height: 50%;
+        &__text{
+            padding: 0 10% 20% 10%;
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+            color: $color-grey;
+        }
+    }
+    .col-1-of-4{
+        &:hover{
+            transform: translateY(-4rem) scale(1.1);
+            
+        }
+        &:not(:last-child){
+            margin-right: calc(4*#{$margin-right-grip});
+        }
+        width: calc((100% - 4*3*#{$margin-right-grip})/4);
+        background-color: rgba($color: $color-white, $alpha: 0.8s);
+        border-radius: 3rem;
+        transition-duration: 0.4s;
+    }
+    h3{
+        color: $color-grey;
+        font-size: 2rem;
+    }
+}

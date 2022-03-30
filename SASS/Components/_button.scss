@@ -1,0 +1,49 @@
+.btn__box{
+    color: $color-grey;
+    font-size: 1.5rem;
+    background-color: $color-white;
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+    padding: 2rem 3.5rem;
+    border-radius: 5rem;
+    display: inline-block;
+    transition-duration: 0.4s;
+    &::after{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 0px;
+        top:0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: $color-white;
+        border-radius: 5rem;
+    }
+    
+    &:hover{
+        transform: translateY(-0.3rem);
+        box-shadow: 0 0.5rem 2rem $color-black;
+        cursor: pointer;
+        &::after{
+            animation-name: smalltobig;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+.btn__text{
+    display: inline-block;
+    color: $color-primary-dark;
+    text-decoration: none;
+    padding: 0.7rem;
+    border-bottom: 2px solid $color-primary-dark;
+    transition-duration: 0.4s;
+    &:hover{
+        transform: translateY(-0.5rem);
+        background-color: $color-primary-dark;
+        color: $color-white;
+    }
+}
+

@@ -1,0 +1,107 @@
+.card{
+    perspective: 200rem;
+    position: relative;
+    margin: auto;
+    width: 85%;
+    [class^="card__"]{  
+        overflow: hidden;
+        box-shadow: 0rem 0rem 1rem rgba(0, 0, 0, 0.336);
+        backface-visibility: hidden;
+        transition-duration: 0.7s;
+        border-radius: 5rem;
+        height: 60vh;
+    }
+    [class^="card--background"]{
+        background-size: cover;
+        height: 50%;
+        clip-path: ellipse(82% 65% at 48% 30%);
+    }
+    [class^="card__front"]{
+        transform: rotate(0deg);
+        position: absolute;
+        width: 100%;
+        .card--background-1{
+            background-image: linear-gradient(to right bottom,rgba($color-secondary-light,.8),rgba($color-secondary-dark,.4)),url('../../img/involve1.jpg');
+        }
+        .card--background-2{
+            background-image: linear-gradient(to right bottom,rgba($color-primary-light,0.6),rgba($color-primary-dark,.5)),url('../../img/involve2.jpg');
+        }
+        .card--background-3{
+            background-image: linear-gradient(to right bottom,rgba($color-tertiary-light,0.6),rgba($color-tertiary-dark,.5)),url('../../img/involve3.jpg');
+        }
+        .card-tittle{
+            position: absolute;
+            text-align: right;
+            top: 9rem;
+            right: 0rem;
+            padding-right: 2rem;
+            span{
+                -webkit-box-decoration-break: clone;
+                line-height: 5rem;
+                padding: 1rem;
+                color: white;
+                text-transform: uppercase;
+                font-size: 3rem;
+                background-clip: padding-box;
+                border-radius: 4rem;
+            }
+            &-1{
+                background-image: linear-gradient(to right bottom,rgba($color-secondary-light,.8),rgba($color-secondary-dark,.8));
+            }
+            &-2{
+                background-image: linear-gradient(to right bottom,rgba($color-primary-light,0.9),rgba($color-primary-dark,.8));
+            }
+            &-3{
+                background-image: linear-gradient(to right bottom,rgba($color-tertiary-light,0.9),rgba($color-tertiary-dark,.8));
+            }
+        }
+        ul{
+            margin: auto;
+            margin-top: 3rem;
+            width: 70%;
+            li{
+                color: $color-grey;
+            }
+            li:not(:last-child){
+                padding-bottom: 2rem;
+                margin-bottom: 2rem;
+                border-bottom: 1px solid;
+                border-color: #dbdbdb;
+            }
+            list-style: none;
+            padding: 0;
+            font-size: 1.5rem;
+            
+            text-align: center;
+        }
+    }
+    [class ^="card__back"]{
+        transform: rotateY(180deg);
+        color: $color-white;
+        .back-text__tittle{
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+        .back-text{
+            font-weight: 200;
+            font-size: 6rem;
+            margin-bottom: 6rem;
+        }
+    }
+    .card__back-1{
+        background-image: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark);
+    }
+    .card__back-2{
+        background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+    }
+    .card__back-3{
+        background-image: linear-gradient(to right bottom,$color-tertiary-light,$color-tertiary-dark);
+    }
+    &:hover [class ^="card__back"]{ 
+        transform: rotateY(0deg);
+    }
+    &:hover [class ^="card__front"]{ 
+        transform: rotateY(-180deg);
+    }
+}

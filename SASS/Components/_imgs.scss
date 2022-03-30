@@ -1,0 +1,25 @@
+.imgs{
+    position: relative;
+    margin-left: 10rem;
+    [class^='imgs--']{
+        width: 50%;
+        position: absolute;
+        transition-duration: 0.4s;
+        outline-offset: 0.5rem;
+        &:hover{
+            cursor: pointer;
+            z-index: 1;
+            transform: scale(1.1);
+            outline: 1rem solid $color-primary-dark;
+            border-radius: 0.5rem;
+        }
+    }
+    .imgs--1{
+        right: 20rem;
+        top: 10rem;
+    }
+    .imgs--2{
+        top: -9rem;
+        right: 15rem;
+    }
+}
